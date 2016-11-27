@@ -72,11 +72,6 @@ module.exports = function(config) {
       'karma-ng-html2js-preprocessor'
     ],
 
-    coverageReporter: {
-      type : 'html',
-      dir : 'coverage/'
-    },
-
     reporters: ['progress', 'coverage', 'coveralls'],
 
     coverageReporter: {
