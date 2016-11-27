@@ -4,4 +4,6 @@ node_js:
   - "6"
 before_script:
   - npm install -g bower gulp-cli
+  - bower install
+script: gulp test
 
