@@ -77,7 +77,12 @@ module.exports = function(config) {
       dir : 'coverage/'
     },
 
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage', 'coveralls'],
+
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    },
 
     proxies: {
       '/assets/': path.join('/base/', conf.paths.src, '/assets/')
