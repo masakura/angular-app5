@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var conf = require('./conf');
 
 var karma = require('karma');
+var coveralls = require('gulp-coveralls');
 
 var pathSrcHtml = [
   path.join(conf.paths.src, '/**/*.html')
@@ -49,4 +50,9 @@ gulp.task('test', ['scripts'], function(done) {
 
 gulp.task('test:auto', ['watch'], function(done) {
   runTests(false, done);
+});
+
+gulp.task('test:coveralls', ['test'], function(done) {
+  gulp.src('coverage/lcov.info')
+    .pipe(coveralls());
 });
