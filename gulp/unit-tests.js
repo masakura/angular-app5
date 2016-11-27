@@ -53,6 +53,6 @@ gulp.task('test:auto', ['watch'], function(done) {
 });
 
 gulp.task('test:coveralls', ['test'], function(done) {
-  gulp.src('coverage/lcov.info')
+  gulp.src('coverage/**/lcov.info')
     .pipe(coveralls());
 });
